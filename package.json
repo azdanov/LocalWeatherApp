@@ -1,6 +1,6 @@
 {
   "name": "LocalWeatherApp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Show local weather based on your location.",
   "main": "index.html",
   "repository": "https://github.com/azdanov/LocalWeatherApp.git",
@@ -8,7 +8,7 @@
   "license": "Unlicense",
   "scripts": {
     "dev": "webpack --config webpack.config.js",
-    "watch": "webpack-dev-server --content-base ./ --port 8080 --hot",
+    "watch": "webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.js"
   },
   "devDependencies": {
@@ -21,7 +21,6 @@
     "clean-webpack-plugin": "^0.1.16",
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.4",
-    "cssnano": "^3.10.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-plugin-import": "^2.6.1",
@@ -32,7 +31,10 @@
     "node-sass": "^4.5.3",
     "postcss-cssnext": "^3.0.2",
     "postcss-loader": "^2.0.6",
+    "postcss-reporter": "^4.0.0",
+    "postcss-url": "^7.1.0",
     "sass-loader": "^6.0.6",
+    "semantic-ui-sass": "^2.2.10-5",
     "style-loader": "^0.18.2",
     "stylelint": "^8.0.0",
     "stylelint-config-standard": "^17.0.0",
