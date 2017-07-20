@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const postcssCssNext = require('postcss-cssnext');
 const postcssReporter = require('postcss-reporter');
 const postcssUrl = require('postcss-url');
@@ -82,7 +81,7 @@ module.exports = {
     clean,
     extract,
     html,
-    new webpack.HotModuleReplacementPlugin(),
     sync,
   ],
+  stats: 'minimal',
 };

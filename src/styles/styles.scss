@@ -83,12 +83,9 @@ main {
     font-size: 1.6rem;
   }
 
-  #weather-description {
+  .row:last-child {
+    padding-top: 0;
     margin-bottom: 5px;
-  }
-
-  #temperature::after {
-    content: '°';
   }
 }
 

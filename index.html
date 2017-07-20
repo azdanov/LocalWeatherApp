@@ -24,15 +24,20 @@
       <p><i id="weather-icon" class="wi wi-night-sleet wi-main"></i></p>
       <div id="info-main" class="ui centered grid">
         <div class="row">
-          <p><span id="city">Tallinn</span>, <span id="country">EE</span></p>
+          <p id="weather-description" title="Weather description">Cloudy Skies</p>
         </div>
-        <div class="two wide mobile only column"></div>
-        <div class="four wide mobile four wide tablet six wide computer right aligned column">
-          <p id="temperature">23</p>
+        <div class="two wide mobile only two wide computer only column"></div>
+        <div class="four wide mobile four wide tablet five wide computer right aligned column">
+          <p id="temperature" title="Temperature">
+            <span id="temperature-num">23</span>&nbsp;&deg;
+          </p>
         </div>
-        <div class="three wide mobile four wide tablet three wide computer column"></div>
+        <div class="three wide mobile four wide tablet two wide computer column"></div>
         <div class="seven wide mobile six wide center aligned column">
-          <p id="date month">September <span id="day-num" class="newline">21</span></p>
+          <p id="date" title="Date"><span id="month">September</span> <span id="day-num" class="newline">21</span></p>
+        </div>
+        <div class="row">
+          <p><span id="city" title="City">Tallinn</span>, <span id="country" title="Country">Estonia</span></p>
         </div>
       </div>
     </div>
@@ -40,7 +45,7 @@
       <div class="ui equal width grid">
         <div class="column">
           <div class="ui basic segment">
-            <p id="wind"><i class="wi wi-wind-beaufort-0"></i>
+            <p id="wind" title="Wind speed"><i class="wi wi-wind-beaufort-0"></i>
               <span id="wind-speed">0.5</span>&nbsp;m/s
             </p>
           </div>
@@ -48,7 +53,7 @@
         <div class="column">
           <div class="column">
             <div class="ui basic segment">
-              <p><i class="wi wi-humidity"></i>
+              <p title="Humidity"><i class="wi wi-humidity"></i>
                 <span id="humidity">33</span>%
               </p>
             </div>
@@ -57,7 +62,7 @@
         <div class="column">
           <div class="column">
             <div class="ui basic segment">
-              <p><i class="wi wi-cloudy"></i>
+              <p title="Cloudiness"><i class="wi wi-cloudy"></i>
                 <span id="cloudiness">80</span>%
               </p>
             </div>
