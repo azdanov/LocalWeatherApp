@@ -17,7 +17,7 @@ html {
 body {
   background-color: transparent;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -34,11 +34,14 @@ body {
 }
 
 h1.center.aligned {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 5px 10px 0;
-  display: inline-block;
+  color: white;
+
+  &.attached {
+    border: 0;
+    background-color: #383333;
+  }
 }
 
 main {
@@ -79,20 +82,57 @@ main {
     letter-spacing: -1px;
     font-size: 1.6rem;
   }
+
+  #weather-description {
+    margin-bottom: 5px;
+  }
+
+  #temperature::after {
+    content: '°';
+  }
 }
 
 #info-aux {
   border: 0;
   background-color: #383333;
   color: white;
+
+  p {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  i {
+    display: block;
+    margin-bottom: 5px;
+  }
 }
 
 .newline {
   display: block;
 }
 
+@media screen and (max-width: 420px) {
+  .ui.grid div.twelve.wide.column {
+    width: 100vw !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ui.grid div.twelve.wide.column {
+    max-width: 50% !important;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .ui.grid div.twelve.wide.column {
-    max-width: 40% !important;
+    max-width: 30% !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ui.grid {
+    position: relative;
+    top: -10%;
   }
 }

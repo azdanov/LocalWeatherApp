@@ -1,6 +1,6 @@
 {
   "name": "LocalWeatherApp",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Show local weather based on your location.",
   "main": "index.html",
   "repository": "https://github.com/azdanov/LocalWeatherApp.git",
