@@ -29,7 +29,10 @@ const sync = new BrowserSyncPlugin({
 });
 const purify = new PurifyCSSPlugin({
   paths: glob.sync(path.join(__dirname, './*.html')),
-  minimize: isDevelopment
+  minimize: !isDevelopment,
+  purifyOptions: {
+    whitelist: ['visible', 'loading'],
+  },
 });
 
 module.exports = {
