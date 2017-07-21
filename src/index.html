@@ -20,8 +20,9 @@
     <h1 class="ui center aligned top attached header">Local Weather
       <span class="newline">App<i class="wi wi-degrees"></i></span>
     </h1>
-    <div class="ui center aligned attached segment">
+    <div id="main" class="ui center aligned attached loading segment">
       <p><i id="weather-icon" class="wi wi-night-sleet wi-main"></i></p>
+      <i id="refresh" class="wi icon wi-refresh" tabindex="1"></i>
       <div id="info-main" class="ui centered grid">
         <div class="row">
           <p id="weather-description" title="Weather description">Cloudy Skies</p>
@@ -45,7 +46,7 @@
       <div class="ui equal width grid">
         <div class="column">
           <div class="ui basic segment">
-            <p id="wind" title="Wind speed"><i class="wi wi-wind-beaufort-0"></i>
+            <p title="Wind speed"><i id="wind-icon" class="wi wi-wind-beaufort-0"></i>
               <span id="wind-speed">0.5</span>&nbsp;m/s
             </p>
           </div>

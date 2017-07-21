@@ -1,4 +1,4 @@
-export default (input) => {
+function isJson(input) {
   let item = typeof input !== 'string' ? JSON.stringify(input) : input;
 
   try {
@@ -9,3 +9,5 @@ export default (input) => {
 
   return typeof item === 'object' && item !== null;
 }
+
+export default isJson;

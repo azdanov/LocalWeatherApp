@@ -1,6 +1,11 @@
-export const getWeather = (address) => {
+/**
+ * Try to get weather from provided api.
+ * @param {String} address is a formated api url
+ * @returns {Promise}
+ */
+export default function getWeather(address) {
   if (!address) {
-    return false;
+    throw new Error('No address provided!');
   }
 
   return fetch(address)
@@ -13,6 +18,4 @@ export const getWeather = (address) => {
     .catch((error) => {
       throw new Error(error.message);
     });
-};
-
-export default getWeather;
+}

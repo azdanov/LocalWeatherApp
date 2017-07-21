@@ -1,6 +1,6 @@
 {
   "name": "LocalWeatherApp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Show local weather based on your location.",
   "main": "index.html",
   "repository": "https://github.com/azdanov/LocalWeatherApp.git",
@@ -10,7 +10,7 @@
     "dev": "webpack --config webpack.config.js",
     "watch": "webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.js",
-    "test": "mocha --reporter spec --compilers js:babel-core/register"
+    "test": "mocha --reporter nyan --compilers js:babel-core/register"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -33,7 +33,9 @@
     "eslint-plugin-react": "^7.1.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^2.29.0",
+    "jsdom": "^11.1.0",
     "mocha": "^3.4.2",
+    "mock-browser": "^0.92.14",
     "node-sass": "^4.5.3",
     "postcss-cssnext": "^3.0.2",
     "postcss-loader": "^2.0.6",

@@ -736,5 +736,7 @@ const isoCountries = {
   },
 };
 
-export default code => (isoCountries[code] && isoCountries[code].name) || code;
-
+export default function isoToCountries(code) {
+  const codeUpper = code.toUpperCase();
+  return (isoCountries[codeUpper] && isoCountries[codeUpper].name) || codeUpper;
+};

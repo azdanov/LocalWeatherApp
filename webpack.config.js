@@ -14,7 +14,7 @@ isDevServer = !(!isDevelopment || isDevServer);
 const clean = new CleanWebpackPlugin(['js', 'css']);
 const html = new HtmlWebpackPlugin({ template: './index.html' });
 const extract = new ExtractTextPlugin({
-  filename: './css/[name].css',
+  filename: './css/[name].[hash].css',
   disable: isDevServer,
 });
 const sync = new BrowserSyncPlugin({
@@ -35,7 +35,7 @@ module.exports = {
   ],
   output: {
     path: `${__dirname}`,
-    filename: './js/[name].js',
+    filename: './js/[name].[hash].js',
   },
   module: {
     rules: [
