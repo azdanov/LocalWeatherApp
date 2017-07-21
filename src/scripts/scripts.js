@@ -2,9 +2,11 @@ import Promise from 'promise-polyfill';
 import 'isomorphic-fetch';
 import getWeather from './getWeather';
 import updateStats from './updateStats';
+import changeUnits from './changeUnits';
 
 const mainWindowElem = document.getElementById('main');
 const refreshElem = document.getElementById('refresh');
+const unitElem = document.getElementById('unit');
 const dateElem = document.getElementById('date');
 const infoAuxElem = document.getElementById('info-aux');
 const hiddenElems = Array.from(document.querySelectorAll('#info-aux .ui.basic'));
@@ -35,16 +37,15 @@ function initUpdate() {
   });
 }
 
-function initAuxUpdate() {
-  console.log('Whoops');
-}
-
-refreshElem.addEventListener('click', () => event.currentTarget.blur());
+[unitElem, refreshElem]
+  .forEach(item => item.addEventListener('click', () => event.currentTarget.blur()));
 
 if ('geolocation' in navigator) {
   refreshElem.addEventListener('click', initUpdate);
+  unitElem.addEventListener('click', changeUnits);
   initUpdate();
 } else {
-  initAuxUpdate();
+  document.getElementById('info-aux').textContent = 'GPS Unavailable';
+  document.getElementById('info-aux').style.lineHeight = 0;
 }
 
