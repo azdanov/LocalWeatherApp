@@ -5,6 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const PurifyCSSPlugin = require('purifycss-webpack');
+const glob = require('glob');
+const path = require('path');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 let isDevServer = process.argv[1].indexOf('webpack-dev-server') !== -1;
@@ -23,6 +26,10 @@ const sync = new BrowserSyncPlugin({
   proxy: 'http://localhost:3100/',
 }, {
   reload: true,
+});
+const purify = new PurifyCSSPlugin({
+  paths: glob.sync(path.join(__dirname, './*.html')),
+  minimize: isDevelopment
 });
 
 module.exports = {
@@ -81,7 +88,8 @@ module.exports = {
     clean,
     extract,
     html,
+    purify,
     sync,
   ],
-  stats: 'minimal',
+  stats: isDevelopment ? 'minimal' : 'normal',
 };
