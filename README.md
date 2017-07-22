@@ -4,6 +4,8 @@ Show local weather based on geolocation, for FreeCodeCamp
 [Live](https://azdanov.github.io/LocalWeatherApp/) version.
 
 ## Build
+First run `yarn` or `npm install` to get all dependencies.
+
 Transpile JS, append external links to html and extract CSS.
 
 `yarn run build`

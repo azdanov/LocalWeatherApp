@@ -117,6 +117,16 @@ main {
       outline: 0;
     }
   }
+
+  #home {
+    color: white;
+    opacity: 0.2;
+    float: right;
+  }
+
+  #home:hover {
+    opacity: 0.6;
+  }
 }
 
 #info-main {
